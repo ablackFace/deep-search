@@ -1,0 +1,22 @@
+{
+    "mcpServers": {
+        "spec-workflow": {
+            "command": "powershell.exe",
+            "args": [
+                "-Command",
+                "npx -y @pimzino/spec-workflow-mcp@latest D:\\work-space\\deep-search"
+            ]
+        },
+        "postgres": {
+            "command": "uv",
+            "args": [
+                "run",
+                "postgres-mcp",
+                "--access-mode=unrestricted"
+            ],
+            "env": {
+                "DATABASE_URI": "postgres://dbuser:admin123@121.43.98.112:5432/deep_search"
+            }
+        }
+    }
+}
